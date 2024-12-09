@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 40">
+  <!-- Abstract star/burst shape -->
+  <path 
+    d="M12 20 L28 20
+       M20 12 L20 28
+       M15 15 L25 25
+       M15 25 L25 15"
+    stroke="#121520"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  
+  <!-- Connecting arc -->
+  <path 
+    d="M20 10 
+       A10 10 0 0 1 30 20"
+    fill="none"
+    stroke="#121520"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  
+  <!-- Text -->
+  <text x="45" y="27" 
+        font-family="Inter, sans-serif" 
+        font-weight="600" 
+        font-size="26"
+        letter-spacing="0.6" 
+        fill="#121520">
+    CraftNova
+  </text>
+</svg>
