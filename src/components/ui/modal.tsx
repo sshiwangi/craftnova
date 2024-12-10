@@ -18,7 +18,7 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (status === "authenticated") {
-      router.push("/home");
+      router.push("/dashboard");
       onClose();
     }
   }, [status, router, onClose]);
@@ -27,7 +27,7 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
     try {
       setIsLoading(true);
       console.log("Attempting to sign in with Google...");
-      const result = await signIn("google", { callbackUrl: "/home" });
+      const result = await signIn("google", { callbackUrl: "/dashboard" });
       console.log("result", result);
 
       if (!result?.ok) {
