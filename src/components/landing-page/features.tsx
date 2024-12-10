@@ -35,7 +35,7 @@ const features: Feature[] = [
 
 const Features = () => {
   return (
-    <section className="relative mb-32 py-32 bg-primary-50">
+    <section id="features" className="relative mb-32 py-32 bg-primary-50">
       {/* Decorative lines with squares */}
       <div
         className="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"

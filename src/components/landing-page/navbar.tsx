@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import SignInModal from "../ui/modal";
 
 interface NavItem {
   text: string;
@@ -11,16 +12,17 @@ interface NavItem {
 const NavItems: NavItem[] = [
   {
     text: "Features",
-    href: "/features",
+    href: "#features",
   },
   {
     text: "How it works",
-    href: "/how-it-works",
+    href: "#working",
   },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSignInOpen, setIsSignInOpen] = useState(false);
 
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 flex items-center w-full justify-center">
@@ -54,12 +56,17 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
               {/* Auth Buttons */}
-              <Link
-                href="/signin"
+              <button
+                onClick={() => setIsSignInOpen(true)}
                 className="text-primary-800 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Sign in
-              </Link>
+              </button>
+
+              <SignInModal
+                isOpen={isSignInOpen}
+                onClose={() => setIsSignInOpen(false)}
+              />
 
               <Link
                 href="/create"

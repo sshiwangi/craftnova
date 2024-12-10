@@ -27,7 +27,7 @@ const timelineData: TimelineItem[] = [
 
 const Timeline: React.FC<{ data: TimelineItem[] }> = ({ data }) => {
   return (
-    <div className="relative">
+    <div id="working" className="relative">
       {/* Timeline line */}
       <div className="absolute left-12 top-0 bottom-0 w-px bg-primary-100" />
 
