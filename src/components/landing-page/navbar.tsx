@@ -23,7 +23,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 flex items-center w-full justify-center">
+    <nav className="fixed top-6 left-0 right-0 z-50 flex items-center w-full justify-center">
       <div className="w-[60%]">
         <div className="bg-primary-100 rounded-lg px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14">

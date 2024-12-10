@@ -19,30 +19,33 @@ const Hero = () => {
     console.log("submitted");
   };
   return (
-    <div className="relative min-h-[650px] flex items-center justify-center  overflow-hidden">
+    <div className="relative min-h-[700px] flex items-center justify-center  overflow-hidden">
       {/* Left decorative squares */}
-      <div className="absolute left-60 top-3/4 -translate-y-1/2">
+      <div className="absolute md:left-40 lg:left-60 top-[55%] -translate-y-1/2">
         <div className="relative w-[180px]">
-          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-0 top-0" />
-          <div className="w-8 h-8 rounded-lg bg-lightgreen absolute left-[44px] top-0 flex items-center justify-center">
+          {/* Top row */}
+          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[44px] top-0" />
+          <div className="w-8 h-8 rounded-lg bg-lightgreen absolute left-[88px] top-0 flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-primary-50" />
           </div>
-          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[88px] top-0" />
 
-          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[44px] top-[44px]" />
+          {/* Middle row */}
+          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-0 top-[44px]" />
 
+          {/* Bottom cluster */}
           <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-0 top-[88px]" />
           <div className="w-8 h-8 rounded-lg bg-saffron absolute left-[44px] top-[88px] flex items-center justify-center">
             <CircleDollarSign className="w-5 h-5 text-primary-50" />
           </div>
           <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[88px] top-[88px]" />
 
-          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[132px] top-[88px]" />
+          {/* Last square */}
+          <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[44px] top-[132px]" />
         </div>
       </div>
 
       {/* Right decorative squares */}
-      <div className="absolute right-60 top-3/4 -translate-y-1/2">
+      <div className="absolute md:right-40 lg:right-60 top-[55%] -translate-y-1/2">
         <div className="relative w-[180px]">
           <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-0 top-0" />
           <div className="w-8 h-8 rounded-lg bg-primary-100 absolute left-[44px] top-0" />
@@ -63,7 +66,7 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10">
+      <div className="text-center w-full px-4 sm:px-6 lg:px-8 max-w-6xl  z-10">
         <h1 className="text-6xl font-bold text-primary-800 mb-6 tracking-tight leading-tight">
           Design your ideas
           <br />
