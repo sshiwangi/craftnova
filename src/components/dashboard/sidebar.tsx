@@ -21,7 +21,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-primary-50 border-r border-primary-100 h-full w-60 flex flex-col">
+    <div className="bg-primary-50 border-r border-gray-300 h-full w-60 flex flex-col">
       {/* Logo */}
       <div className="p-6">
         <Image
