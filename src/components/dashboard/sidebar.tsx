@@ -3,6 +3,7 @@ import { LayoutDashboard, PenSquare, PlusCircle } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { useState } from "react";
 
 const sidebarLinks = [
   {
@@ -17,7 +18,11 @@ const sidebarLinks = [
   },
 ];
 
-const Sidebar = () => {
+interface SidebarProps {
+  setIsPromptModalOpen: (value: boolean) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ setIsPromptModalOpen }) => {
   const pathname = usePathname();
 
   return (
@@ -64,13 +69,13 @@ const Sidebar = () => {
 
       {/* Create New Design Button */}
       <div className="mt-auto p-4">
-        <Link
-          href="/dashboard/new-design"
+        <button
+          onClick={() => setIsPromptModalOpen(true)}
           className="flex items-center gap-2 w-full bg-primary-800 text-primary-50 px-4 py-2 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors"
         >
           <PlusCircle className="w-4 h-4" />
           Create New Design
-        </Link>
+        </button>
       </div>
     </div>
   );
